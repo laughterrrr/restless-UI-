@@ -3,7 +3,7 @@ local tweenService = game:GetService("TweenService")
 local runService = game:GetService("RunService")
 local coreGui = game:GetService("CoreGui")
 
-local library = {flags = {}, toggled = true, keybind = Enum.KeyCode.RightShift, dragSpeed = 0.1}
+local library = {flags = {}, toggled = true, keybind = Enum.KeyCode.RightShift, dragSpeed = 0}
 
 local themes = {
     Dark = {
@@ -249,7 +249,7 @@ function library:Load(opts)
     })
 
     utility.create("UICorner", {
-        CornerRadius = UDim.new(0, 12),
+        CornerRadius = UDim.new(0, 0),
         Parent = main
     })
 
@@ -263,7 +263,7 @@ function library:Load(opts)
 
     
     utility.create("UICorner", {
-        CornerRadius = UDim.new(0, 12),
+        CornerRadius = UDim.new(0, 0),
         Parent = tabs
     })
 
@@ -601,7 +601,7 @@ function library:Load(opts)
                 })
                 
                 utility.create("UICorner", {
-                    CornerRadius = UDim.new(0, 12),
+                    CornerRadius = UDim.new(0, 0),
                     Parent = icon
                 })
                 
@@ -1758,7 +1758,7 @@ function library:Load(opts)
                 })
                 
                 utility.create("UICorner", {
-                    CornerRadius = UDim.new(0, 12),
+                    CornerRadius = UDim.new(0, 0),
                     Parent = icon
                 })
                 
@@ -1948,7 +1948,7 @@ function library:Load(opts)
                 })
                 
                 utility.create("UICorner", {
-                    CornerRadius = UDim.new(0, 12),
+                    CornerRadius = UDim.new(0, 0),
                     Parent = icon
                 })
                 
@@ -2310,7 +2310,7 @@ function library:Load(opts)
                 })
                 
                 utility.create("UICorner", {
-                    CornerRadius = UDim.new(0, 12),
+                    CornerRadius = UDim.new(0, 0),
                     Parent = icon
                 })
                 
@@ -2368,7 +2368,7 @@ function library:Load(opts)
                 })
                 
                 utility.create("UICorner", {
-                    CornerRadius = UDim.new(0, 12),
+                    CornerRadius = UDim.new(0, 0),
                     Parent = colorPickerIcon
                 })
                 
@@ -2702,24 +2702,5 @@ function library:Load(opts)
 
     return windowTypes
 end
-local GAYYYYAYA = Instance.new("ScreenGui")
-GAYYYYAYA.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
-GAYYYYAYA.ResetOnSpawn = false
-local bRAHAHAHAHAH = Instance.new("TextButton")
-bRAHAHAHAHAH.Text = "Toggle UI"
-bRAHAHAHAHAH.Parent = GAYYYYAYA
-bRAHAHAHAHAH.BackgroundTransparency = 0.5
-bRAHAHAHAHAH.BorderSizePixel = 0
-bRAHAHAHAHAH.Position = UDim2.new(1, -120, 0, 75) -- Adjusted the position to top right corner
-bRAHAHAHAHAH.Size = UDim2.new(0, 100, 0, 18)
-bRAHAHAHAHAH.BackgroundColor3 = Color3.fromRGB(234, 93, 78)
-bRAHAHAHAHAH.TextColor3 = Color3.fromRGB(255, 255, 255)
-local UICOOorner = Instance.new("UICorner")
-UICOOorner.Parent = bRAHAHAHAHAH
-local function onButtonClicked()
-    library.toggled = not library.toggled
-    venuslib.Enabled = library.toggled
-end
-bRAHAHAHAHAH.MouseButton1Click:Connect(onButtonClicked)
-end
+
 return library
